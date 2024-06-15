@@ -1,6 +1,7 @@
 <template>
-  <div v-if="loading" class="text-center mt-36">
-    Carregando...
+  <div v-if="loading" class="text-center mt-48">
+    <LoadingSpinner />
+    <p class="mt-4">Carregando...</p>
   </div>
   <div v-else class="container mx-auto p-4">
     <h1 class="text-3xl font-bold mb-4">Catálogo de Jogos HTML5</h1>
