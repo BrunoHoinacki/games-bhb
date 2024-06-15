@@ -52,15 +52,10 @@ const goToGame = (game) => {
     router.push({ path: `/game/${game.id}`, query: { title: game.title, url: game.url, thumbnail: game.thumb, category: game.category, description: game.description, instructions: game.instructions } });
 };
 
-const goBackHome = () => {
-    router.push('/');
-};
-
 onMounted(() => {
     getGames();
 });
 </script>
 
 <style scoped>
-/* Removido o CSS customizado em favor das classes utilitárias do Tailwind CSS */
 </style>
