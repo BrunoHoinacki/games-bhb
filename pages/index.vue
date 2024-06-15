@@ -10,19 +10,20 @@
         <div class="flex justify-between items-center mb-2">
           <h2 class="text-2xl font-semibold mb-2">{{ category }}</h2>
           <button @click="goToCategory(category)"
-            class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-200">
+            class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-700 transition duration-200">
             Ver mais
           </button>
         </div>
-        <div class="flex overflow-x-auto space-x-4 pb-4">
+        <div class="flex overflow-x-auto space-x-4 pb-5">
           <div v-for="game in games.slice(0, 10)" :key="game.id"
-            class="game-card p-4 border rounded-lg shadow-lg w-60 flex-shrink-0 flex flex-col">
+            class="p-4 border rounded-lg shadow-lg shadow-gray-200/50 w-60 flex-shrink-0 flex flex-col">
             <h3 class="text-md font-semibold mb-2 truncate">{{ game.title }}</h3>
             <img :src="game.thumb" :alt="game.title" class="w-full h-40 object-cover mb-2 rounded-lg" />
-            <p class="text-gray-700 mb-2"><strong>Categoria:</strong> {{ game.category }}</p>
+            <p class="text-white mb-2"><strong>Categoria:</strong> {{ game.category }}</p>
             <div class="mt-auto">
               <button @click="goToGame(game)"
-                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200 w-full">
+                class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700 transition duration-200 w-full">
+                <i class="fas fa-gamepad mr-2"></i>
                 Jogar
               </button>
             </div>
