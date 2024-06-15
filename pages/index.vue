@@ -1,10 +1,10 @@
 <template>
-  <div class="container mx-auto p-4">
+  <div v-if="loading" class="text-center">
+    Carregando...
+  </div>
+  <div v-else class="container mx-auto p-4">
     <h1 class="text-3xl font-bold mb-4">Catálogo de Jogos HTML5</h1>
-    <div v-if="loading" class="text-center">
-      Carregando...
-    </div>
-    <div v-else>
+    <div>
       <div v-for="(games, category) in categorizedGames" :key="category" class="mb-8">
         <div class="flex justify-between items-center mb-2">
           <h2 class="text-2xl font-semibold mb-2">{{ category }}</h2>

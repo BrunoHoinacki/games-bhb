@@ -1,5 +1,8 @@
 <template>
-    <div class="container mx-auto p-4">
+    <div v-if="loading" class="text-center">
+        Carregando...
+    </div>
+    <div v-else class="container mx-auto p-4">
         <div class="flex mb-4">
             <div class="w-64">
                 <button @click="goBack"
@@ -40,6 +43,7 @@ const description = ref('');
 const instructions = ref('');
 const width = ref('');
 const height = ref('');
+const loading = ref(true);
 
 onMounted(() => {
     title.value = route.query.title;
@@ -50,6 +54,7 @@ onMounted(() => {
     instructions.value = route.query.instructions;
     width.value = route.query.width || "720";
     height.value = route.query.height || "1280";
+    loading.value = false;
 });
 
 const goBack = () => {

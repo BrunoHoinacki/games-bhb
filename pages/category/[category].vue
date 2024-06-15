@@ -1,5 +1,8 @@
 <template>
-    <div class="container mx-auto p-4">
+    <div v-if="loading" class="text-center">
+        Carregando...
+    </div>
+    <div v-else class="container mx-auto p-4">
         <div class="flex justify-between items-center mb-4">
             <button @click="goBackHome"
                 class="back-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200">
@@ -7,10 +10,7 @@
             </button>
             <h1 class="text-3xl font-bold">{{ category }} - Todos os Jogos</h1>
         </div>
-        <div v-if="loading" class="text-center">
-            Carregando...
-        </div>
-        <div v-else class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="game in games" :key="game.id" class="game-card p-4 border rounded-lg shadow-lg">
                 <h2 class="text-xl font-semibold mb-2">{{ game.title }}</h2>
                 <img :src="game.thumb" :alt="game.title" class="w-full h-auto mb-2 rounded-lg" />
