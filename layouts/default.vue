@@ -1,7 +1,7 @@
 <template>
     <div>
         <AppHeader />
-        <main class="pt-20"> <!-- Adjust the padding-top based on the height of your navbar -->
+        <main class="pt-20 pb-20"> 
             <slot />
         </main>
         <AppFooter />
