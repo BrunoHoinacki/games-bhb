@@ -1,5 +1,5 @@
 <template>
-  <div v-if="loading" class="text-center">
+  <div v-if="loading" class="text-center mt-36">
     Carregando...
   </div>
   <div v-else class="container mx-auto p-4">
