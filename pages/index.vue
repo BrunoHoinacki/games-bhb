@@ -6,10 +6,10 @@
   <div v-else class="container mx-auto p-4">
     <div class="flex justify-center mb-8">
       <div class="bg-gradient-to-r from-teal-700 via-teal-500 to-teal-700 p-6 rounded-lg shadow-lg text-center">
-        <h1 class="text-5xl font-bold mb-2">
+        <h1 class="text-3xl md:text-5xl font-bold mb-2">
           <span v-for="(letter, index) in letters" :key="index" :class="`letter letter-${index}`">{{ letter }}</span>
         </h1>
-        <p class="text-white text-xl">Bem-vindo ao Joga-Aqui.com!</p>
+        <p class="text-white text-base md:text-xl">Bem-vindo ao Joga-Aqui.com!</p>
       </div>
     </div>
     <div>

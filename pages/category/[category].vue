@@ -6,18 +6,19 @@
     <div v-else class="container mx-auto p-4">
         <div class="flex justify-between items-center mb-4">
             <button @click="goBackHome"
-                class="back-button bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200">
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200 transform hover:scale-105">
                 ← Voltar para Home
             </button>
-            <h1 class="text-3xl font-bold">{{ category }} - Todos os Jogos</h1>
+            <h1 class="text-5xl font-bold text-gray-800">{{ category }} - Todos os Jogos</h1>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div v-for="game in games" :key="game.id" class="game-card p-4 border rounded-lg shadow-lg">
-                <h2 class="text-xl font-semibold mb-2">{{ game.title }}</h2>
-                <img :src="game.thumb" :alt="game.title" class="w-full h-auto mb-2 rounded-lg" />
+            <div v-for="game in games" :key="game.id"
+                class="p-4 border rounded-lg shadow-lg transform transition-transform duration-200 hover:scale-105 bg-white">
+                <h2 class="text-2xl font-semibold mb-2 text-gray-800">{{ game.title }}</h2>
+                <img :src="game.thumb" :alt="game.title" class="w-full h-40 object-cover mb-2 rounded-lg" />
                 <p class="text-gray-700 mb-2"><strong>Categoria:</strong> {{ game.category }}</p>
                 <button @click="goToGame(game)"
-                    class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200">
+                    class="bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600 transition duration-200 w-full">
                     Jogar
                 </button>
             </div>
@@ -63,19 +64,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.game-card {
-    transition: transform 0.2s;
-}
-
-.game-card:hover {
-    transform: scale(1.05);
-}
-
-.back-button {
-    transition: transform 0.2s;
-}
-
-.back-button:hover {
-    transform: scale(1.05);
-}
+/* Removido o CSS customizado em favor das classes utilitárias do Tailwind CSS */
 </style>
