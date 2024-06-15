@@ -24,9 +24,9 @@
         <div class="flex overflow-x-auto space-x-6 pb-6">
           <div v-for="game in games.slice(0, 10)" :key="game.id"
             class="p-4 border rounded-lg shadow-lg shadow-gray-200/50 w-60 flex-shrink-0 flex flex-col bg-white">
-            <h3 class="text-lg font-semibold mb-2 truncate text-gray-800">{{ game.title }}</h3>
+            <h3 class="text-lg font-semibold mb-2 truncate text-yellow-500">{{ game.title }}</h3>
             <img :src="game.thumb" :alt="game.title" class="w-full h-40 object-cover mb-2 rounded-lg" />
-            <p class="text-gray-600 mb-2"><strong>Categoria:</strong> {{ game.category }}</p>
+            <p class="text-yellow-500 mb-2"><strong>Categoria:</strong> {{ game.category }}</p>
             <div class="mt-auto">
               <button @click="goToGame(game)"
                 class="bg-yellow-500 text-white px-4 py-2 rounded-full hover:bg-yellow-600 transition duration-200 w-full">
