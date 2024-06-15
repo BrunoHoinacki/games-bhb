@@ -11,7 +11,7 @@
                             class="fas fa-layer-group"></i> Games</a></li>
                 <li @click="openChatModal" class="hover:bg-teal-500 rounded-lg p-1 hidden md:inline cursor-pointer"><a
                         href="#" class="text-white"><i class="fas fa-comments"></i> Chat</a></li>
-                <li class="hover:bg-teal-500 rounded-lg p-1 md:hidden"><a href="#" class="text-white"><i
+                <li class="hover:bg-teal-500 rounded-lg p-1 md:hidden"><a href="/" class="text-white"><i
                             class="fas fa-home"></i></a></li>
                 <li class="hover:bg-teal-500 rounded-lg p-1 md:hidden"><a href="#" class="text-white"><i
                             class="fas fa-layer-group"></i></a></li>

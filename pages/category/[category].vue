@@ -4,16 +4,14 @@
         <p class="mt-4">Carregando...</p>
     </div>
     <div v-else class="container mx-auto p-4">
-        <div class="flex justify-between items-center mb-4">
-            <button @click="goBackHome"
-                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200 transform hover:scale-105">
-                ← Voltar para Home
-            </button>
-            <h1 class="text-5xl font-bold text-gray-800">{{ category }} - Todos os Jogos</h1>
+        <div class="flex flex-col justify-between items-center mb-4">
+            <div>
+                <h1 class="text-2xl md:text-5xl font-extrabold text-yellow-500">{{ category }} - Todos os Jogos</h1>
+            </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="game in games" :key="game.id"
-                class="p-4 border rounded-lg shadow-lg transform transition-transform duration-200 hover:scale-105 bg-white">
+                class="p-4 border rounded-lg shadow-lg bg-white">
                 <h2 class="text-2xl font-semibold mb-2 text-gray-800">{{ game.title }}</h2>
                 <img :src="game.thumb" :alt="game.title" class="w-full h-40 object-cover mb-2 rounded-lg" />
                 <p class="text-gray-700 mb-2"><strong>Categoria:</strong> {{ game.category }}</p>
